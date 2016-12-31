@@ -1,0 +1,9 @@
+﻿<div  class="input-group departmentSelectBoxContainer" >
+    <input class="form-control" #searchBox type='text' placeholder='Select Department' (keyup)="search(searchBox.value)" [(ngModel)]="selectedDeptName" />
+    <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="selectDeptBoxButtonClick()">⏷</button>
+    </span>
+</div>
+<ul id="departmentSelect" class='list-group table-of-contents departmentSelect'>
+    <li class='list-group-item' *ngFor="let dept of searchedDepartments" (click)="selectDepartment(dept)">{{dept.Name}}</li>
+</ul>

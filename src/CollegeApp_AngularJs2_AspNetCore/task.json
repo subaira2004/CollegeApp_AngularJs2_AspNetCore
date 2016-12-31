@@ -1,0 +1,41 @@
+﻿{
+  "version": "0.1.0",
+  "command": "gulp",
+  "isShellCommand": true,
+  "args": [
+    "--no-color"
+  ],
+  "tasks": [
+    {
+      "taskName": "scriptsNStyles",
+      "isBuildCommand": true,
+      "showOutput": "always"
+    },
+    {
+      "taskName": "clean",
+      "isBuildCommand": true,
+      "showOutput": "always"
+    },
+    {
+      "taskName": "ts",
+      "isBuildCommand": true,
+      "showOutput": "always",
+      "problemMatcher": "$tsc"
+    },
+    //{
+    //  "taskName": "watch",
+    //  "isBuildCommand": true,
+    //  "showOutput": "always"
+    //},
+    //{
+    //  "taskName": "watch.ts",
+    //  "isBuildCommand": true,
+    //  "showOutput": "always"
+    //},
+    {
+      "taskName": "default",
+      "isBuildCommand": true,
+      "showOutput": "always"
+    }
+  ]
+}
