@@ -1,4 +1,5 @@
 /// <reference path="./section.d.ts" />
+/// <reference path="./department.d.ts" />
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -49,7 +50,7 @@ var SectionComponent = (function () {
             });
         }
     };
-    //To Edit the Department
+    //To Edit the Section
     SectionComponent.prototype.editSection = function (sectiontEdit) {
         var _this = this;
         this.sectService.getSectionById(sectiontEdit.SectionId).then(function (sect) {
@@ -64,14 +65,14 @@ var SectionComponent = (function () {
             };
         });
     };
-    //to Delete the department by id
+    //to Delete the Section by id
     SectionComponent.prototype.deleteSection = function (sectiontDel) {
         var _this = this;
         if (confirm("Are sure Want to Delete this Section?")) {
             this.sectService.deleteSectionById(sectiontDel.SectionId).then(function (sects) { return _this.sections = sects; });
         }
     };
-    //to get app department via department service and to set to the local department list
+    //to get app Section via section service and to set to the local section list
     SectionComponent.prototype.getAllSection = function () {
         var _this = this;
         this.sectService.getAllSections().then(function (sects) { return _this.sections = sects; });
