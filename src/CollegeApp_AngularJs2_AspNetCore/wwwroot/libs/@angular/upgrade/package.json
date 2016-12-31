@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      "@angular/upgrade@~2.4.0",
+      "C:\\Users\\Zubair\\documents\\visual studio 2015\\Projects\\CollegeApp_AngularJs2_AspNetCore\\src\\CollegeApp_AngularJs2_AspNetCore"
+    ]
+  ],
+  "_from": "@angular/upgrade@>=2.4.0-0 <2.5.0-0",
+  "_id": "@angular/upgrade@2.4.1",
+  "_inCache": true,
+  "_location": "/@angular/upgrade",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/upgrade-2.4.1.tgz_1482365965363_0.7568612019531429"
+  },
+  "_npmUser": {
+    "email": "angular-core+npm@google.com",
+    "name": "angular"
+  },
+  "_npmVersion": "3.5.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "@angular/upgrade",
+    "raw": "@angular/upgrade@~2.4.0",
+    "rawSpec": "~2.4.0",
+    "scope": "@angular",
+    "spec": ">=2.4.0-0 <2.5.0-0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@angular/upgrade/-/upgrade-2.4.1.tgz",
+  "_shasum": "f13a61551c0616fdb765e34e0ebdeeadfebb5f6a",
+  "_shrinkwrap": null,
+  "_spec": "@angular/upgrade@~2.4.0",
+  "_where": "C:\\Users\\Zubair\\documents\\visual studio 2015\\Projects\\CollegeApp_AngularJs2_AspNetCore\\src\\CollegeApp_AngularJs2_AspNetCore",
+  "author": {
+    "name": "angular"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular/issues"
+  },
+  "dependencies": {},
+  "description": "Angular - the library for easing update from v1 to v2",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "f13a61551c0616fdb765e34e0ebdeeadfebb5f6a",
+    "tarball": "https://registry.npmjs.org/@angular/upgrade/-/upgrade-2.4.1.tgz"
+  },
+  "homepage": "https://github.com/angular/angular#readme",
+  "installable": true,
+  "license": "MIT",
+  "main": "bundles/upgrade.umd.js",
+  "maintainers": [
+    {
+      "name": "angular",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "module": "index.js",
+  "name": "@angular/upgrade",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular/compiler": "2.4.1",
+    "@angular/core": "2.4.1",
+    "@angular/platform-browser": "2.4.1",
+    "@angular/platform-browser-dynamic": "2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.git"
+  },
+  "scripts": {},
+  "typings": "index.d.ts",
+  "version": "2.4.1"
+}

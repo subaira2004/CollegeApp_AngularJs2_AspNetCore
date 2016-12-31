@@ -1,0 +1,37 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">CollegeApp</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="Master.html">Master</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container body-content">
+    <div class="col-xs-3">
+        <!-- required for floating -->
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs tabs-left nav-stacked">
+            <li routerLinkActive="active"><a routerLink="master/department" >Department</a></li>
+            <li routerLinkActive="active"><a routerLink="master/section" >Section</a></li>
+            <li routerLinkActive="active"><a routerLink="master/student" >Student</a></li>
+            <li routerLinkActive="active"><a routerLink="master/lecturer" >Lecturer</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-9">
+
+        <router-outlet></router-outlet>
+
+    </div>
+</div>
+<div class="footer">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2016 - College App</p>
+</div>
