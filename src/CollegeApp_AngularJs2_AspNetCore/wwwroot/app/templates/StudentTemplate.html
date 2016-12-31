@@ -1,0 +1,81 @@
+﻿<div class="row">
+    <h1>Student</h1>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <form (ngSubmit)="submit()">
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+                <input class="form-control" id="studentName" type="text" [(ngModel)]="student.StudentName" name="studentName" required />
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <department-select [newSelectedDept]="newSelectedDept" (onSelectDept)="onSelectDept($event)"></department-select>
+            </div>
+            <div class="form-group">
+                <label for="section">Section:</label>
+                <select class="dropdown form-control" [(ngModel)]="student.SectionId" name="section" required>
+                    <option *ngFor="let section of sections" value={{section.SectionId}}>
+                        {{section.SectionName}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="joiningDate">Date of Join:</label>
+                <input type="date" class="form-control" id="joiningDate" name="joiningDate" [(ngModel)]="student.DateOfJoin"  />
+            </div>
+            <div class="form-group">
+                <label for="graduationDate">Date Of Graduation:</label>
+                <input type="date" class="form-control" id="graduationDate" name="graduationDate" [(ngModel)]="student.DateofGraduaton"  />
+            </div>
+            <input type="submit" id="submit" value="Submit" class="btn btn-default" />
+            <button class="btn btn-danger" id="cancel" (click)="clearStudent()">Cancel</button>
+        </form>
+        <br />
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Sr.No
+                    </th>
+                    <th>
+                        Student Name
+                    </th>
+                    <th>
+                        Department
+                    </th>
+                    <th>
+                        Section
+                    </th>
+                    <th>
+                        Join Date
+                    </th>
+                    <th>
+                        Graduation Date
+                    </th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students;let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{student.StudentName}}</td>
+                    <td>{{student.DepartmentName}}</td>
+                    <td>{{student.SectionName}}</td>
+                    <td><span *ngIf="student.DateOfJoin">{{(student.DateOfJoin.replace("/Date(", "").replace(")/","") | date : short)}}</span><span [hidden]="student.DateOfJoin">--</span></td>
+                    <td><span *ngIf="student.DateofGraduaton">{{(student.DateofGraduaton.replace("/Date(", "").replace(")/","") | date : short)}}</span><span [hidden]="student.DateofGraduaton">--</span></td>
+                    <td>
+                        <button class="btn btn-primary" id="editStudent" (click)="editStudent(student)">
+                            Edit
+                        </button>
+                        <button class="btn btn-primary" id="deleteStudent" (click)="deleteStudent(student)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

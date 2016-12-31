@@ -12,6 +12,7 @@ import { DepartmentService } from './department.service';
 import { SectionComponent } from './section.component';
 import { SectionService } from './section.service';
 import { StudentComponent } from './student.component';
+import { StudentService } from './student.service';
 import { LecturerComponent } from './lecturer.component';
 
 const appRoutes: Routes = [
@@ -38,7 +39,7 @@ const appRoutes: Routes = [
         SectionComponent,
         StudentComponent,
         LecturerComponent],
-    providers: [DepartmentService, SectionService],
+    providers: [DepartmentService, SectionService, StudentService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

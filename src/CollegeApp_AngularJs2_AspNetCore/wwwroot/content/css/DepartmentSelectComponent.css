@@ -6,6 +6,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     position:absolute;
+    z-index:100;
 }
 
     .departmentSelect > li:hover {
