@@ -94,30 +94,28 @@ var DepartmentSelectComponent = (function () {
         this.subscription = this.searchTerms
             .debounceTime(300) // wait for 300ms pause in events
             .distinctUntilChanged() // ignore if next search term is same as previous
-            .switchMap(function (term) {
-                return term // switch to new observable each time
-                ? _this.deptService.searchDepartment(term)
-                : [];
-            })
+            .switchMap(function (term) { return term // switch to new observable each time
+            ? _this.deptService.searchDepartment(term)
+            : []; })
             .catch(function (error) {
-                // TODO: real error handling
-                console.log(error);
-                return [];
-            }).subscribe(function (result) {
-                _this.searchedDepartments = result;
-            });
+            // TODO: real error handling
+            console.log(error);
+            return [];
+        }).subscribe(function (result) {
+            _this.searchedDepartments = result;
+        });
     };
     DepartmentSelectComponent.prototype.ngOnDestroy = function () {
         // and don't forget cleanup
         this.subscription.unsubscribe();
     };
     __decorate([
-        core_1.Output(),
+        core_1.Output(), 
         __metadata('design:type', Object)
     ], DepartmentSelectComponent.prototype, "onSelectDept", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata('design:type', Object),
+        core_1.Input(), 
+        __metadata('design:type', Object), 
         __metadata('design:paramtypes', [Object])
     ], DepartmentSelectComponent.prototype, "newSelectedDept", null);
     DepartmentSelectComponent = __decorate([
@@ -126,7 +124,7 @@ var DepartmentSelectComponent = (function () {
             providers: [department_service_1.DepartmentService],
             templateUrl: "../app/templates/DepartmentSelectTemplate.html",
             styleUrls: ["../content/css/DepartmentSelectComponent.css"]
-        }),
+        }), 
         __metadata('design:paramtypes', [department_service_1.DepartmentService])
     ], DepartmentSelectComponent);
     return DepartmentSelectComponent;

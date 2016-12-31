@@ -1,5 +1,5 @@
---temp-output:C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\obj\Debug\netcoreapp1.0\
---out:C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\bin\Debug\netcoreapp1.0\CollegeApp_AngularJs2_AspNetCore.dll
+--temp-output:C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\obj\Debug\netcoreapp1.0\
+--out:C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\bin\Debug\netcoreapp1.0\CollegeApp_AngularJs2_AspNetCore.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -177,19 +177,19 @@
 --reference:C:\Users\Zubair\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Zubair\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Zubair\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\obj\Debug\netcoreapp1.0\CollegeApp_AngularJs2_AspNetCoredotnet-compile.deps.json",CollegeApp_AngularJs2_AspNetCore.deps.json
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Program.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Startup.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Controllers\CollegeAppMasterController.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Migrations\20161226172315_MyFirstMigration.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Migrations\20161226172315_MyFirstMigration.Designer.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Migrations\CollegeAppDBContextModelSnapshot.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\CollegeAppDBContext.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\Department.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\DeptSection.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\DeptSectionViewModel.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\ErrorMsgViewModel.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\Lecturer.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\LecturerViewModel.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\Student.cs
-C:\Users\Zubair\documents\visual studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\StudentViewModel.cs
+--resource:"C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\obj\Debug\netcoreapp1.0\CollegeApp_AngularJs2_AspNetCoredotnet-compile.deps.json",CollegeApp_AngularJs2_AspNetCore.deps.json
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Program.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Startup.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Controllers\CollegeAppMasterController.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Migrations\20161226172315_MyFirstMigration.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Migrations\20161226172315_MyFirstMigration.Designer.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Migrations\CollegeAppDBContextModelSnapshot.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\CollegeAppDBContext.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\Department.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\DeptSection.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\DeptSectionViewModel.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\ErrorMsgViewModel.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\Lecturer.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\LecturerViewModel.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\Student.cs
+C:\Users\Zubair\Documents\Visual Studio 2015\Projects\CollegeApp_AngularJs2_AspNetCore\src\CollegeApp_AngularJs2_AspNetCore\Models\StudentViewModel.cs
