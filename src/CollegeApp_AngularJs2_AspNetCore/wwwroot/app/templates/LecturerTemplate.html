@@ -1,0 +1,43 @@
+﻿<div class="row">
+    <h1>Lecturer</h1>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <form (ngSubmit)="submit()">
+            <div class="form-group">
+                <label for="lecturerName">Lecturer Name:</label>
+                <input class="form-control" id="lecturerName" type="text" [(ngModel)]="lecturer.LecturerName" name="lecturerName" required />
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <department-select [newSelectedDept]="newSelectedDept" (onSelectDept)="onSelectDept($event)"></department-select>
+            </div>
+            <input type="submit" id="submit" value="Submit" class="btn btn-default" />
+            <button class="btn btn-danger" id="cancel" (click)="clearLecturer()">Cancel</button>
+        </form>
+        <br />
+    </div>
+</div>
+<div class="row">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Lecturer</th>
+                <th>Department</th>
+                <th>Edit - Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lecturer of lecturers;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{lecturer.LecturerName}}</td>
+                <td>{{lecturer.DepartmentName}}</td>
+                <td>
+                    <button class="btn btn-primary" id="editLecturer" (click)="editLecturer(lecturer)">Edit</button>
+                    <button class="btn btn-primary" id="deleteLecturer" (click)="deleteLecturer(lecturer)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

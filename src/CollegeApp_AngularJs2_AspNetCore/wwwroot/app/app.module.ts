@@ -14,6 +14,7 @@ import { SectionService } from './section.service';
 import { StudentComponent } from './student.component';
 import { StudentService } from './student.service';
 import { LecturerComponent } from './lecturer.component';
+import { LecturerService } from './lecturer.service';
 
 const appRoutes: Routes = [
     { path: 'master/department', component: DepartmentComponent },
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
         SectionComponent,
         StudentComponent,
         LecturerComponent],
-    providers: [DepartmentService, SectionService, StudentService],
+    providers: [DepartmentService, SectionService, StudentService, LecturerService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

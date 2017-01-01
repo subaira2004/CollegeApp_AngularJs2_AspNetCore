@@ -368,6 +368,22 @@ namespace CollegeApp_AngularJs2_AspNetCore.Controllers
             return AllLecturers();
         }
 
+        [HttpGet]
+        public JsonResult SearchLecturer(string searchText)
+        {
+            var searchLecturer = (from p in context.Lecturers
+                                join q in context.Departments on p.DepartmentId equals q.DepartmentId
+                                where p.Name.Contains(searchText)
+                                select new LecturerViewModel
+                                {
+                                    LecturerId = p.LecturerId,
+                                    LecturerName = p.Name,
+                                    DepartmentId = p.DepartmentId,
+                                    DepartmentName = q.Name
+                                }).ToList();
+            return Json(searchLecturer);
+        }
+
         #endregion
     }
 }
