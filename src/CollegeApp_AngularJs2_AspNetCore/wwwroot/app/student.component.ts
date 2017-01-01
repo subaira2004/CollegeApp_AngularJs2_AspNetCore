@@ -2,7 +2,7 @@
 /// <reference path="./department.d.ts" />
 /// <reference path="./student.d.ts" />
 
-import { Component, OnInit, Pipe } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 import { DepartmentSelectComponent } from './department-select.component';
