@@ -130,7 +130,17 @@ namespace CollegeApp_AngularJs2_AspNetCore.Controllers
         [HttpGet]
         public JsonResult GetDeptSectionByDeptId(int DepartmentId)
         {
-            return Json(context.DeptSections.Where(p => p.DepartmentId == DepartmentId).ToList());
+            var Sections = from p in context.DeptSections
+                           join q in context.Departments on p.DepartmentId equals q.DepartmentId
+                           where p.DepartmentId == DepartmentId
+                           select new DeptSectionViewModel
+                           {
+                               SectionId = p.SectionId,
+                               SectionName = p.Name,
+                               DepartmentId = p.DepartmentId,
+                               DepartmentName = q.Name
+                           };
+            return Json(Sections.ToList());
         }
 
         [HttpGet]
@@ -266,6 +276,27 @@ namespace CollegeApp_AngularJs2_AspNetCore.Controllers
             context.SaveChanges();
 
             return AllStudents();
+        }
+
+        [HttpGet]
+        public JsonResult SearchStudent(string searchText)
+        {
+            var searchedStudent = (from p in context.Students
+                                   join q in context.DeptSections on p.SectionId equals q.SectionId
+                                   join r in context.Departments on q.DepartmentId equals r.DepartmentId
+                                   where p.Name.Contains(searchText)
+                                   select new StudentViewModel
+                                   {
+                                       StudentId = p.StudentId,
+                                       StudentName = p.Name,
+                                       DepartmentId = q.DepartmentId,
+                                       DepartmentName = r.Name,
+                                       SectionId = p.SectionId,
+                                       SectionName = q.Name,
+                                       DateofGraduaton = p.DateofGraduaton,
+                                       DateOfJoin = p.DateOfJoin
+                                   }).ToList();
+            return Json(searchedStudent);
         }
 
         #endregion

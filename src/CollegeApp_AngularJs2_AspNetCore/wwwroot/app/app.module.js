@@ -20,6 +20,7 @@ var department_service_1 = require('./department.service');
 var section_component_1 = require('./section.component');
 var section_service_1 = require('./section.service');
 var student_component_1 = require('./student.component');
+var student_service_1 = require('./student.service');
 var lecturer_component_1 = require('./lecturer.component');
 var appRoutes = [
     { path: 'master/department', component: department_component_1.DepartmentComponent },
@@ -47,7 +48,7 @@ var AppModule = (function () {
                 section_component_1.SectionComponent,
                 student_component_1.StudentComponent,
                 lecturer_component_1.LecturerComponent],
-            providers: [department_service_1.DepartmentService, section_service_1.SectionService],
+            providers: [department_service_1.DepartmentService, section_service_1.SectionService, student_service_1.StudentService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
