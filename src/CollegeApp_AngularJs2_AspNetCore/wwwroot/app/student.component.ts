@@ -2,7 +2,7 @@
 /// <reference path="./department.d.ts" />
 /// <reference path="./student.d.ts" />
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 import { DepartmentSelectComponent } from './department-select.component';
@@ -42,7 +42,7 @@ export class StudentComponent implements OnInit {
             this.student.SectionId = 0; //clearing currently selected Section
         }
         else {
-            this.getSectionByDeptID(this.selectedDept.DepartmentId);            
+            this.getSectionByDeptID(this.selectedDept.DepartmentId);
         }
     }
 
@@ -87,13 +87,14 @@ export class StudentComponent implements OnInit {
         this.sectService.getDeptSectionByDeptId(DepartmentId).then(sects => this.sections = sects);
     }
 
-    clearStudent(): void {
+    clearStudent(): boolean {
         this.student = this.emptyStudent();
         this.sections = [];
         //this.section = this.emptySection();
 
         this.newSelectedDept = this.emptyDepartment();
         this.selectedDept = this.emptyDepartment();
+        return false;
 
     }
 
@@ -124,6 +125,19 @@ export class StudentComponent implements OnInit {
                 Name: this.student.DepartmentName
             };
             this.getSectionByDeptID(this.student.DepartmentId);
+            if (this.student.DateOfJoin) {
+                this.student.DateOfJoin = new Date(this.student.DateOfJoin)                
+                var strMonth: string = ((this.student.DateOfJoin.getMonth() + 1) < 10 ? "0" + (this.student.DateOfJoin.getMonth() + 1) :  (this.student.DateOfJoin.getMonth() + 1)) ;
+                var strDate: string = (this.student.DateOfJoin.getDate() + 1 < 10 ? "0" + this.student.DateOfJoin.getDate() : this.student.DateOfJoin.getDate());
+                this.student.DateOfJoin = this.student.DateOfJoin.getFullYear() + "-" + strMonth + "-" + strDate;
+            }
+            if (this.student.DateofGraduaton) {
+                this.student.DateofGraduaton = new Date(this.student.DateofGraduaton);
+                var strMonth: string = ((this.student.DateofGraduaton.getMonth() + 1) < 10 ? "0" + (this.student.DateofGraduaton.getMonth() + 1) : (this.student.DateofGraduaton.getMonth() + 1)) ;
+                var strDate: string = (this.student.DateofGraduaton.getDate() + 1 < 10 ? "0" + this.student.DateofGraduaton.getDate() :  this.student.DateofGraduaton.getDate()) ;
+                this.student.DateofGraduaton = this.student.DateofGraduaton.getFullYear() + "-" + strMonth + "-" + strDate;
+            }
+
         });
     }
 

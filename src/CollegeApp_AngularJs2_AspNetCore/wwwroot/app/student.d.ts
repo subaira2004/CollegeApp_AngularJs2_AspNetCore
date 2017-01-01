@@ -5,6 +5,6 @@
     SectionId: number,
     SectionName: string,
     StudentName: string,
-    DateOfJoin: Date,
-    DateofGraduaton: Date
+    DateOfJoin: any,
+    DateofGraduaton: any
 }

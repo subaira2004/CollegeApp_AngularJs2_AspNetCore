@@ -79,6 +79,7 @@ var StudentComponent = (function () {
         //this.section = this.emptySection();
         this.newSelectedDept = this.emptyDepartment();
         this.selectedDept = this.emptyDepartment();
+        return false;
     };
     //to save or update the current student
     StudentComponent.prototype.submit = function () {
@@ -107,6 +108,18 @@ var StudentComponent = (function () {
                 Name: _this.student.DepartmentName
             };
             _this.getSectionByDeptID(_this.student.DepartmentId);
+            if (_this.student.DateOfJoin) {
+                _this.student.DateOfJoin = new Date(_this.student.DateOfJoin);
+                var strMonth = ((_this.student.DateOfJoin.getMonth() + 1) < 10 ? "0" + (_this.student.DateOfJoin.getMonth() + 1) : (_this.student.DateOfJoin.getMonth() + 1));
+                var strDate = (_this.student.DateOfJoin.getDate() + 1 < 10 ? "0" + _this.student.DateOfJoin.getDate() : _this.student.DateOfJoin.getDate());
+                _this.student.DateOfJoin = _this.student.DateOfJoin.getFullYear() + "-" + strMonth + "-" + strDate;
+            }
+            if (_this.student.DateofGraduaton) {
+                _this.student.DateofGraduaton = new Date(_this.student.DateofGraduaton);
+                var strMonth = ((_this.student.DateofGraduaton.getMonth() + 1) < 10 ? "0" + (_this.student.DateofGraduaton.getMonth() + 1) : (_this.student.DateofGraduaton.getMonth() + 1));
+                var strDate = (_this.student.DateofGraduaton.getDate() + 1 < 10 ? "0" + _this.student.DateofGraduaton.getDate() : _this.student.DateofGraduaton.getDate());
+                _this.student.DateofGraduaton = _this.student.DateofGraduaton.getFullYear() + "-" + strMonth + "-" + strDate;
+            }
         });
     };
     //to Delete the Student by id

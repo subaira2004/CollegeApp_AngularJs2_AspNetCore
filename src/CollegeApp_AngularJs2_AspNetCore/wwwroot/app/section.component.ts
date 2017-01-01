@@ -16,7 +16,8 @@ import { SectionService } from './section.service';
 export class SectionComponent implements OnInit {
     sections: Section[];
     section: Section;
-    //newSelectedDept will be used while editing section, at that point, we should pass this sections's department as selected department to <department-select>
+    //newSelectedDept will be used while editing section, at that point, 
+    //we should pass this sections's department as selected department to <department-select>
     newSelectedDept: Department;
     selectedDept: Department;
 
