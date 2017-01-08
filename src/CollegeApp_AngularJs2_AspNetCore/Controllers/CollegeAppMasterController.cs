@@ -21,11 +21,12 @@ namespace CollegeApp_AngularJs2_AspNetCore.Controllers
         }
 
         // GET: CollegeAppMaster
-        public ContentResult Index()
+        public ActionResult Index()
         {
             // var reader = new StreamReader(env.WebRootPath+"\\Master.html");
-            var contents = "";// File()
-            return Content(contents, "text/html");
+            //var contents = "";// File()
+            //return Content(contents, "text/html");
+            return Redirect("../master.html");
         }
 
         #region "Department"
